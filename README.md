@@ -8,14 +8,17 @@ Il est égal à 256 - octet significatif.
 ```
 
 ## Fonctionnement
-Par exemple dans notre exemple sur un masque de `255.224.0.0`
-On voit vite que l'octet significatif (celui où la séparation a lieu) est 224.
+* Par exemple dans notre exemple sur un masque de `255.224.0.0`
+* Dans notre masque, l’octet significatif est le deuxième (255.224.0.0), soit 224
+* Nous allons donc prendre le deuxième octet de notre adresse (192.168.0.1), soit 168.
 
-Notre nombre magique vaut donc `256 - 224 = 32`
+* Notre nombre magique vaut donc `256 - 224 = 32`
 
-Pour cela, il va falloir écrire tous les multiples du nombre magique (jusqu'à 256 bien sûr)<br>
-0, 32, 64, 96, 128, 160, 192, 224, 256.
+* La première adresse du réseau sera donc le multiple du nombre magique, strictement inférieur à 168.
+* Pour cela, il va falloir écrire tous les multiples du nombre magique en partant de 0 (jusqu'à 256)<br>
+`0, 32, 64, 96, 128, 160, 192, 224, 256`.
 
-* La première adresse du réseau sera le multiple du nombre magique, inférieur ou égal à l'octet correspondant dans l'adresse.
 * La dernière adresse du réseau sera le multiple suivant, moins 1.
+* Le multiple suivant est `192`. Auquel on enlève 1 pour trouver 191
+* La première adresse de la plage est donc `192.160.0.0` et la dernière `192.191.255.255`.
 
