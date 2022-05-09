@@ -22,3 +22,4 @@ Il est égal à 256 - octet significatif.
 * Le multiple suivant est `192`. Auquel on enlève 1 pour trouver 191
 * La première adresse de la plage est donc `192.160.0.0` et la dernière `192.191.255.255`.
 
+![image](https://user-images.githubusercontent.com/83721477/167442993-45beded6-3530-44bf-92df-d56e32e3b538.png)
